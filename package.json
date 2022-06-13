@@ -1,5 +1,5 @@
 {
-  "name": "react-native-webview-bridge",
+  "name": "@netless/react-native-webview-bridge",
   "version": "0.0.1",
   "description": "",
   "main": "build/index.js",
