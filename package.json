@@ -1,0 +1,36 @@
+{
+  "name": "react-native-webview-bridge",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netless-io/react-native-webview-bridge.git"
+  },
+  "keywords": [
+    "react-native",
+    "webview",
+    "bridge"
+  ],
+  "author": "leavesster",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/netless-io/react-native-webview-bridge/issues"
+  },
+  "homepage": "https://github.com/netless-io/react-native-webview-bridge#readme",
+  "devDependencies": {
+    "@types/uuid": "^7.0.3",
+    "typescript": "^4.7.3",
+    "uuid": "^7.0.3"
+  },
+  "dependencies": {
+    "@netless/webview-bridge": "^0.0.3",
+    "react-native-get-random-values": "^1.8.0",
+    "react-native-webview": "^11.22.2"
+  }
+}
