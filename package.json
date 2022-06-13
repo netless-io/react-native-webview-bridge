@@ -22,6 +22,10 @@
   "bugs": {
     "url": "https://github.com/netless-io/react-native-webview-bridge/issues"
   },
+  "files": [
+    "build",
+    "src"
+  ],
   "homepage": "https://github.com/netless-io/react-native-webview-bridge#readme",
   "devDependencies": {
     "@types/uuid": "^7.0.3",
