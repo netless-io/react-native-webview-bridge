@@ -1,7 +1,8 @@
 import WebView from 'react-native-webview';
 import 'react-native-get-random-values';
 import { RNCommon } from '@netless/webview-bridge';
-import { v4 as uuid } from 'uuid';
+// import { v4 as uuid } from 'uuid';
+import uuid from "react-native-uuid";
 
 class Bridge {
     private webview: WebView | undefined = undefined;
@@ -31,8 +32,8 @@ class Bridge {
             });
             return;
         }
-        const actionId = uuid();
-        const message = RNCommon.bridgeMessageTemplate(RNCommon.BridgeEventType.req, actionId, method, args);
+        const actionId = uuid.v4();
+        const message = RNCommon.bridgeMessageTemplate(RNCommon.BridgeEventType.req, `${actionId}`, method, args);
         this.queue.set(actionId, { ack: false });
         this.webview!.postMessage(message);
         return actionId;
@@ -45,8 +46,8 @@ class Bridge {
             });
         };
         return new Promise((resolve, reject) => {
-            const actionId = uuid();
-            const message = RNCommon.bridgeMessageTemplate(RNCommon.BridgeEventType.req, actionId, method, args);
+            const actionId = uuid.v4();
+            const message = RNCommon.bridgeMessageTemplate(RNCommon.BridgeEventType.req, `${actionId}`, method, args);
             this.queue.set(actionId, { ack: false, resolve: resolve, reject: reject });
             this.webview!.postMessage(message);
         });

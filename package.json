@@ -1,6 +1,6 @@
 {
   "name": "@netless/react-native-webview-bridge",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@netless/webview-bridge": "^0.0.3",
-    "react-native-get-random-values": "^1.8.0",
+    "react-native-uuid": "^2.0.1",
     "react-native-webview": "^11.22.2"
   }
 }
