@@ -1,7 +1,5 @@
 import WebView from 'react-native-webview';
-import 'react-native-get-random-values';
 import { RNCommon } from '@netless/webview-bridge';
-// import { v4 as uuid } from 'uuid';
 import uuid from "react-native-uuid";
 
 class Bridge {
