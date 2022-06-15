@@ -39,8 +39,10 @@ class Bridge {
 
     public callAsync(method: string, ...args: any): Promise<any> {
         if (!this.isReady) {
-            this.pendingAction.push(() => {
-                this.callAsync(method, ...args);
+            return new Promise((resolve, reject) => {
+                this.pendingAction.push(() => {
+                    this.callAsync(method, ...args).then(resolve, reject);
+                });
             });
         };
         return new Promise((resolve, reject) => {
